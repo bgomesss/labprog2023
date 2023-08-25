@@ -169,14 +169,29 @@ def q18():
     litros = (distancia / 12)
     print(f'A distancia percorrida foi: ', distancia)
     print(f'A quantidade de litros consumida foi: ',litros)
-q18()
 #19. Faça um programa que calcule o valor de uma prestação em atraso.
 #    Para isso, o programa deve ler o valor da prestação vencida, a
 #    taxa periódica de juros e o período de atraso. Ao final, o
 #    programa deve imprimir o valor da prestação atrasada, o período
 #    de atraso, os juros que serão cobrados pelo período de atraso, o
 #    valor da prestação acrescido dos juros. Considere juros simples.
-
+def q19():
+    valor_prestacao = float(input("Digite o valor da prestação vencida: "))
+    taxa_juros = float(input("Digite a taxa periódica de juros (em decimal): "))
+    periodo_atraso = int(input("Digite o período de atraso (em meses): "))
+    juros = (valor_prestacao * taxa_juros * periodo_atraso)
+    prestacao_atrasada = valor_prestacao + juros
+    print("\nDetalhes da prestação atrasada:")
+    print(f"Valor da prestação atrasada: R${prestacao_atrasada:.2f}")
+    print(f"Período de atraso: {periodo_atraso} meses")
+    print(f"Juros cobrados: R${juros:.2f}")
+    print(f"Valor total a pagar: R${prestacao_atrasada:.2f}")
 #20. Faça um programa que efetue a apresentação do valor da conversão
 #    em real (R$) de um valor lido em dólar (US$). Para isso, será
 #    necessário também ler o valor da cotação do dólar.
+def q20():
+    valor_dolar = float(input("Digite o valor em dólar (US$): "))
+    cotacao_dolar = float(input("Digite a cotação do dólar: "))
+    valor_real = valor_dolar * cotacao_dolar
+    print(f"O valor em real (R$) é: R${valor_real:.2f}")
+q20()
